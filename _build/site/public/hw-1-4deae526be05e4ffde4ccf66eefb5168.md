@@ -1,9 +1,3 @@
----
-title: Homework 1
-kernelspec:
-  name: python3
-  display_name: 'Python 3'
----
 # Homework 1 - Probability
 
 ## Question 1: 
@@ -55,4 +49,6 @@ $g^{*}(3) = P(Y=1 \mid X=3) > P(Y=0 \mid X=3) = 0.8 > 0.2 = 1$ <br>
 :label: markdown-myst
 print("Here's some python!")
 ```
+
+And here I reference [](#markdown-myst).
  
