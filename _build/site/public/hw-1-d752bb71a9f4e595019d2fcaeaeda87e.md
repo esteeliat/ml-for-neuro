@@ -40,8 +40,6 @@ $g^{*}(2) = P(Y=1 \mid X=2) > P(Y=0 \mid X=2) = 0.4 > 0.6 = 0$ <br>
 $g^{*}(3) = P(Y=1 \mid X=3) > P(Y=0 \mid X=3) = 0.8 > 0.2 = 1$ <br>
 
 ### d. visualize the decision boundary:
-:::{figure} https://github.com/esteeliat/ml-for-neuro/blob/main/resources/hw1_decision_chart.png?raw=true
-:align: center
-:width: 80%
-:::
+:::{figure} https://github.com/esteeliat/ml-for-neuro/blob/main/resources/output.png?raw=true
+
 $$$ e. Estimate the Bayes classifier error by simulation 
