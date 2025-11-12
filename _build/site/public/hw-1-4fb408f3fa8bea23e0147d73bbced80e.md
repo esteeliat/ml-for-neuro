@@ -35,14 +35,7 @@ X=3: <br>
 - $P(Y=1 \mid X=3) = 1 - 0.2 =0.8$ <br>
 
 ### c. Determine $g^{*}(1),\, g^{*}(2),\, \text{and}\, g^{*}(3)$
-$g^{*}(1) = P(Y=1 \mid X=1) > P(Y=0 \mid X=1) = 0.2 > 0.8 = 0$ <br>
-$g^{*}(2) = P(Y=1 \mid X=2) > P(Y=0 \mid X=2) = 0.4 > 0.6 = 0$ <br>
-$g^{*}(3) = P(Y=1 \mid X=3) > P(Y=0 \mid X=3) = 0.8 > 0.2 = 1$ <br>
 
 ### d. visualize the decision boundary:
-Category A: |||||||||| (10 units)
-Category B: ||||||||||||||| (15 units)
-Category C: ||||||| (7 units)
-Category D: |||||||||||||||||||| (20 units)
 
 $$$ e. Estimate the Bayes classifier error by simulation 
