@@ -5,62 +5,64 @@ kernelspec:
   name: python3
   display_name: 'Python 3'
 ---
-$$ {2\over 3} $$
+
 ## Question 1: 
-## c.
-we want to compute $$L(θ)=(P(X_1=x_1))$$*...*$$(P(X_n=x_n))$$.
+
+### c
+we want to compute $L(θ)=(P(X_1=x_1))$*...*$(P(X_n=x_n))$.
 
 first, we notice that n1=|{i | X_i=1}|, n2=|{i | X_i=2}|, n3=|{i | X_i=3\}|
 
-so we do get n=n1+n2+n3, therefore - $$P(X_i=1)= θ$$, $$P(X_i=2)={2(1−θ)​ \over 3}$$, $$P(X_i=3)={(1−θ)​\over 3} $$.
+so we do get n=n1+n2+n3, therefore - $P(X_i=1)= θ$, $P(X_i=2)={2(1−θ)​ \over 3}$, $P(X_i=3)={(1−θ)​\over 3} $.
 
 we then get that 
-## final answers: $$L(θ)=$$ $${θ^{n_1}}$$ * ($${2(1-θ) \over 3}){^{n_2}}$$ * ($${(1-θ) \over 3}){^{n_3}}$$ = $${2^{{n_2}} \over 3^{n_2+n_3}}$$ * $${θ^{n_1}}$$ * $${(1-θ)^{n_2+n_3}}$$
-## d.
-log likelihood function - $$l(θ)=log(L(θ))$$
+### final answers: $L(θ)=$ ${θ^{n_1}}$ * (${2(1-θ) \over 3}){^{n_2}}$ * (${(1-θ) \over 3}){^{n_3}}$ = ${2^{{n_2}} \over 3^{n_2+n_3}}$ * ${θ^{n_1}}$ * ${(1-θ)^{n_2+n_3}}$
+### d.
+log likelihood function - $l(θ)=log(L(θ))$
 
-so $$l(θ) =$$ log($${2^{{n_2}} \over 3^{n_2+n_3}}$$ * $${θ^{n_1}}$$ * $${(1-θ)^{n_2+n_3}}$$) = $${n_2}log(2)-({n_2+n_3})log(3)+{n_1}log(θ)+({n_2+n_3})log(1-θ)$$
+so $l(θ) =$ log(${2^{{n_2}} \over 3^{n_2+n_3}}$ * ${θ^{n_1}}$ * ${(1-θ)^{n_2+n_3}}$) = ${n_2}log(2)-({n_2+n_3})log(3)+{n_1}log(θ)+({n_2+n_3})log(1-θ)$
 
-now in order to find the value of $$θ$$ that maximizes it we will Differentiate $$l$$ by $$θ$$: 
-$$dl \over dθ$$ = $${n_1} \over θ$$ - $${n_2+n_3} \over 1-θ$$
+now in order to find the value of $θ$ that maximizes it we will Differentiate $l$ by $θ$: 
+$dl \over dθ$ = ${n_1} \over θ$ - ${n_2+n_3} \over 1-θ$
 
-because the first two termsare not depended on $$θ$$ and the derivative of log(θ) is $$1 \over θ$$. also, there is a minus over $${n_2+n_3} \over 1-θ$$ as we derivative $$log(1-θ)$$ by $$θ$$.
+because the first two termsare not depended on $θ$ and the derivative of log(θ) is $1 \over θ$. also, there is a minus over ${n_2+n_3} \over 1-θ$ as we derivative $log(1-θ)$ by $θ$.
 
 now in order to find the maximum we will compare to zero the derivative:
-$${n_1} \over θ$$ = $${n_2+n_3} \over 1-θ$$ so $${n_1}(1-θ)=({n_2+n_3})θ$$
+${n_1} \over θ$ = ${n_2+n_3} \over 1-θ$ so ${n_1}(1-θ)=({n_2+n_3})θ$
 
-=> $$n_1$$ = $$θ({n_1+n_2+n_3})$$ = $$θn$$ => 
-## final answers: $$\hatθ_{MLE}$$ = $$n_1 \over n$$
-## e.
-Compute the bias: $$bias(\hatθ)$$ = $$E[\hatθ]-θ$$ = 
+=> $n_1$ = $θ({n_1+n_2+n_3})$ = $θn$ => 
+### final answers: $\hatθ_{MLE}$ = $n_1 \over n$
+### e.
+Compute the bias: $bias(\hatθ)$ = $E[\hatθ]-θ$ = 
 
-from last section we got $$\hatθ$$ = $$n_1 \over n$$ that's equal to $$1 \over n$$ $$\sum_{i=1}^{n}E[{1_{(X_i=1)}}]$$ 
+from last section we got $\hatθ$ = $n_1 \over n$ that's equal to $1 \over n$ $\sum_{i=1}^{n}E[{1_{(X_i=1)}}]$ 
 
-because $$E[\hatθ]={n_1 \over n}$$ = $${1 \over n}E[n_1]$$  so we can write the indicator $${1_{(X_i=1)}}$$ is 1 when $${X_i=1}$$ or $$0$$ else. 
+because $E[\hatθ]={n_1 \over n}$ = ${1 \over n}E[n_1]$  so we can write the indicator ${1_{(X_i=1)}}$ is 1 when ${X_i=1}$ or $0$ else. 
 
-then from linearity $$E[{n_1}]=$$ $$\sum_{i=1}^{n}E[{1_{(X_i=1)}}]$$, because $${n_1}$$ is actually summing all the times $${X_i}=1$$ 
+then from linearity $E[{n_1}]=$ $\sum_{i=1}^{n}E[{1_{(X_i=1)}}]$, because ${n_1}$ is actually summing all the times ${X_i}=1$ 
 
-However, since $$P({X_i}=1)=θ$$ we therefore get $$\sum_{i=1}^{n}E[{1_{(X_i=1)}}]$$ = $$nθ$$
+However, since $P({X_i}=1)=θ$ we therefore get $\sum_{i=1}^{n}E[{1_{(X_i=1)}}]$ = $nθ$
 
-so $$E[\hatθ]={nθ \over n}=θ$$ => $$bias(\hatθ)$$ = $$E[\hatθ]-θ$$ = $$θ-θ$$ = 0
+so $E[\hatθ]={nθ \over n}=θ$ => $bias(\hatθ)$ = $E[\hatθ]-θ$ = $θ-θ$ = 0
 
-and compute the variance: $$Var(\hatθ)$$
+and compute the variance: $Var(\hatθ)$
 
-$$Var(\hatθ)=Var({1 \over n}$$ $$\sum_{i=1}^{n}[{1_{(X_i=1)}}]$$) = $$Var({1 \over {n^2}}$$ $$\sum_{i=1}^{n}[{1_{(X_i=1)}}]$$)
+$Var(\hatθ)=Var({1 \over n}$ $\sum_{i=1}^{n}[{1_{(X_i=1)}}]$) = $Var({1 \over {n^2}}$ $\sum_{i=1}^{n}[{1_{(X_i=1)}}]$)
 
-we know that the variables $${X_1}$$,..., $${X_n}$$ are independent, so Var($$\sum_{i=1}^{n}[{1_{(X_i=1)}}]$$) = $$\sum_{i=1}^{n}Var[{1_{(X_i=1)}}]$$
+we know that the variables ${X_1}$,..., ${X_n}$ are independent, so Var($\sum_{i=1}^{n}[{1_{(X_i=1)}}]$) = $\sum_{i=1}^{n}Var[{1_{(X_i=1)}}]$
 
-they are also bernoulli so $$Var[{1_{(X_i=1)}}]$$= $$θ(1-θ)$$,
+they are also bernoulli so $Var[{1_{(X_i=1)}}]$= $θ(1-θ)$,
 
-=> Var($$\sum_{i=1}^{n}[{1_{(X_i=1)}}]$$) = $$nθ(1−θ)$$ 
+=> Var($\sum_{i=1}^{n}[{1_{(X_i=1)}}]$) = $nθ(1−θ)$ 
 
-therefore $$Var(\hatθ)$$ = $${1 \over {n^2}}*nθ(1-θ)={θ(1-θ) \over n}$$
-## final answers: $$E[\hatθ]=0$$ and $$Var(\hatθ)={θ(1-θ) \over n}$$ 
-## f.
+therefore $Var(\hatθ)$ = ${1 \over {n^2}}*nθ(1-θ)={θ(1-θ) \over n}$
+### final answers: $E[\hatθ]=0$ and $Var(\hatθ)={θ(1-θ) \over n}$ 
+### f.
 Compute the Mean Squared Error (MSE):
 
-$$MSE(\hatθ)=Var(\hatθ)+{Bias(\hatθ)}^2={θ(1-θ) \over n}-0^2={θ(1-θ) \over n}$$
-## final answers: $$MSE(\hatθ)={θ(1-θ) \over n}$$
+$MSE(\hatθ)=Var(\hatθ)+{Bias(\hatθ)}^2={θ(1-θ) \over n}-0^2={θ(1-θ) \over n}$
+### final answers: $MSE(\hatθ)={θ(1-θ) \over n}$
+
 ## Question 2:
 ### Overall Takeaway
 Missing Data: symptoms_other_text, Survival_data, No-residual (Post-surgery) columns all have > 98% missing data and so should be dropped from the analysis. offset_treatment_date is missing in 90% of rows, spanning 69% of patients - but there will only ever be an offset_treatment_date if the treatment_plan was SRS or Surgery so a null value can be expected as long as treatment_plan is 'Routine surveillance'. When checking for this, there are only 2 rows where this rule is broken so we should remove those two rows. Similarly, previous_treatment is null in 83% of rows - but a null value just indicates the patient didn't have any previous treatment (not that data is necessarily missing) and so null values should be replaced with "No previous treatment". age_at_mri, sex_birth, and ethnicity are missing in 14%-20% of patients depending on the variable. Since these variables should not change from visit to visit - for those with multiple visits and data in at least 1 visit - we can impute the data. For patients without any data available - we will drop all their data (luckily there is lots of overlap between the columns so this still leaves us ~79.5% of the data). Lastly, symptoms and treatment_plan have <1% missing data - we should drop patients with missing data.
