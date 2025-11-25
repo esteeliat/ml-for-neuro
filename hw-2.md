@@ -211,7 +211,7 @@ y = df['y']
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, random_state=0, test_size=0.2)
-
+```
 ### b. Train Linear Regression
 ```{code-cell}
 # Linear regression to x
@@ -250,7 +250,7 @@ print("Evaluate LR Predictions")
 evaluate(linear_predictions, "Linear Regression Predictions")
 print("Evaluate LR Predictions to Polynomial Features of X")
 evaluate(poly_linear_predictions, "Polynomial Regression Predictions (Degree 5)")
-
+```
 ## c. KNN Regression
 ```{code-cell}
 knn1 = KNeighborsRegressor(n_neighbors=1)
