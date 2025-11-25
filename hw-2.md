@@ -205,7 +205,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('./resources/neuron.csv')X = df[['x']]  # Ensure X is 2D for sklearn
+df = pd.read_csv('./resources/neuron.csv')
+X = df[['x']]  # Ensure X is 2D for sklearn
 y = df['y']
 
 X_train, X_test, y_train, y_test = train_test_split(
