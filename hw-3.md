@@ -80,6 +80,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
+
 (d)
 ```{code-cell}
 # --- Generate test set ---
@@ -105,6 +106,10 @@ for deg in range(4):
     test_mse[deg] = mse
     print(f"Degree {deg} test MSE: {mse:.6f}")
 ```
+after generatint the test set and calculating the MSE for each model we get:  
+Degree 0 test MSE: 0.138755  
+Degree 1 test MSE: 0.062089  
+Degree 2 test MSE: 0.055201  
+Degree 3 test MSE: 0.054719  
 
-(e)  
-
+(e)  We can see by the results of (d) that degree 0 is too simplified, in degree 1 we are getting better but still the MSE are higher that 2,3. We can also see in the plot, that Naka–Rushton model has curve and degrees 0,1 can't capture it. In degree 2 we are getting even a lower MSE but still this model has some struggles to capture the curve. Therefore, degree 3 with the lowest MSE and we can see this is the first polynomial flexible enough to approximate the shape. Therefore, the Degree 3 model preformes the best.
